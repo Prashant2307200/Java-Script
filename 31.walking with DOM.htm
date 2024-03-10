@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- text ,comment ,element node -->
+    left node and right node in dom tree
+    <script>
+        let nodes = document.body.childNodes;
+        console.log(nodes);
+        let commentNode = nodes[1];
+        let textNode = nodes[2];
+        let elementNode = nodes[3];
+        console.log(commentNode);
+        console.log(elementNode);
+        console.log(textNode);
+    </script>
+</body>
+</html>

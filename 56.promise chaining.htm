@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cpu = Math.floor(Math.random()*2);
+        let p1 = new Promise((res,rej) => {
+            setTimeout(() => {
+                console.log("Processed");
+                if(cpu){
+                    res(`Success! ${cpu}`);
+                }else{
+                    rej(new Error(`Error occurs ${cpu}`));
+                }
+            },5000);
+        });
+        
+        let p2 = p1.then((val) => {
+            console.log(val);
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Processed");
+                    if(cpu){
+                        res(`Success! ${cpu}`);
+                    }else{
+                        rej(new Error(`Error occurs ${cpu}`));
+                    }
+                },5000);
+            });
+        }).catch((error) => {
+            console.log(error);
+            return new Error(`Error occurs ${error}`);
+        });
+        
+        let p3 = p2.then((val) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Processed");
+                    if(cpu){
+                        res(`Success! ${cpu}`);
+                    }else{
+                        rej(new Error(`Error occurs ${cpu}`));
+                    }
+                },5000);
+            }); 
+        }).catch((error) => {
+            console.log(error);
+            return new Error(`Error occurs ${error}`);
+        });
+        
+    </script>
+</body>
+</html>

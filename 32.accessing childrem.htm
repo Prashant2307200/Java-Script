@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- starts here -->
+    <nav>
+        <ul>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>
+    <script>
+
+        let body = document.body;
+        let bodyNodes = body.childNodes;
+        let bodyElm = body.children;
+
+        console.log(bodyNodes[bodyNodes.length - 1] ,body.lastChild);
+        console.log(bodyElm[bodyElm.length - 1] ,body.lastElementChild);
+        console.log(body.hasChildNodes());
+
+        let bodyElmArr = Array.from(bodyElm);
+        for(let elm of bodyElm){
+            console.log(elm);
+        }
+    </script>
+</body>
+</html>

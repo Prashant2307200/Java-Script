@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let timeCnt = document.createElement("div");
+        document.body.prepend(timeCnt);
+        let timeId = setInterval(((s1,s2)=>{
+            let currTime = new Date();
+            timeCnt.innerHTML = s1 + s2 + currTime;
+        }),1000,"Hey ","it's ");
+        // clearInterval(timeId);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
++<!DOCTYPE html>
+<h ntml lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="division" data-hero="jeevan" data-health="44">This is div</div>
+    <script>
+        let elm = document.getElementsByTagName("div")[0];
+        console.log(elm.attributes);
+        console.log(elm.setAttribute("class","item1"));
+        console.log(elm.removeAttribute("class"));
+        console.log(elm.hasAttribute("class"));
+        console.log(elm.getAttribute("class"));
+        console.log(elm.dataset);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = prompt("Enter s ,w or g");
+        let cpu = Math.floor(Math.random()*3);
+        cpu = ["w", "s", "g"][cpu];
+        alert(cpu);
+
+        const prec = {
+            "w" : 0,
+            "s" : 1,
+            "g" : 2
+        };
+        
+        const match = (cpu,user) => {
+            if(cpu == user){
+                alert("tie");
+            }else if(prec[user] > prec[cpu] || (cpu == 'g' && user == 'w')){
+                alert("You win");
+            }else if(prec[user] < prec[cpu] || (cpu == 'w' && user == 'g')){
+                alert("You lose");
+            }
+        };
+
+        match(cpu,user);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="first" class="nav-list">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+    <script>
+        
+        let ul = document.querySelector("ul");
+        ul.className += " unordered-list";
+        // ul.classList.remove("list");
+        // ul.classList.add("list");
+        ul.classList.toggle("list");
+        ul.classList.replace("nav-list","nav");
+        console.log(ul.classList ,ul.className);
+        console.log(ul.classList.contains("nav"));
+    </script>
+</body>
+</html>

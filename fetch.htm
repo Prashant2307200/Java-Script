@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const URL = 'https://cat-fact.herokuapp.com/facts';
+        (async () => {
+            console.log("Getting Data Please Wait ...");
+            let resp = await fetch(URL);
+            console.log(resp ,resp.status);
+            let data = await resp.json();
+            console.log("Usable Data of Arr " + data[0].text);
+        })();
+        // AJAX : IS ASYNC JS & XML
+        // JSON IS JS OBJ NOTATION
+        // json() RETURN 2ND PROMISE THAT RES WITH RES OF PARSING THE RESP BODY TEXT AS JSON i/p json o/p js obj
+        (function(){
+            fetch(URL).then(resp => {
+                return resp.json();
+            }).then(data => console.log(data));
+        })();
+
+    </script>
+</body>
+
+</html> 

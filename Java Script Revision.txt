@@ -1,0 +1,590 @@
+data_type     var_name  =  data_value = new DS(impli.) => name["key"]; or name.key
+let|var|const identifier   nn ss bb u   DS constructor
+
+6 == '6' -> 1 | 6 === '6' -> 0
+num = str - num or num + +str | str = num + str | n = +s | s = ""+n
+
+if_else_ -> 5program
+switch -> case ,default ,break ,continue
+alert ,confirm ,prompt ,console -> 9 ,default value
+escape sequence -> 4 program
+template literal -> `...${}...`
+for(){} ,while(){} ,do{}while{} ,for(let blank in DS){} ,for(let blank of DS){}
+function funcName(){//arguments} | const funcName = function(){} | const funcName = ()=>{} | ff or hr or annormous func
+iife : functName() or (()=>{})();  |  callback : ()=>{} or ()=>funcName(angs)
+hoisting -> old js var | func - declaration + rosCode
+closures -> nestedFunc returning reference | ec = var + func + le
+this -> global : window | eventListner : elm | obj : n > a ,window (le ,varStore)
+abc.call(obj) | abc.apply(obj,[args]) | const bindedFunc = abc.bind(obj,[args]); -> bindedFunc()
+dataType DSvar = DS -> [a,,c,...restArr] | {age,name,...restObj} | para : ...restArr | args : ...spreadArr | [...arr1,...arr2] | [...arr] | {...obj,city : "newDelhi"}
+const math = require('math'); module.exports.varName=val; or exports.varName=val or exports=val or exports=obj
+import file | import blank from file | import {blank as name} from file | export exp | export default obj
+memory management : stack(Primitive) | heap(Non-premitive)
+console obj : log dir table clear info error assert warn time timeEnd
+date obj : constructor - 6 | get or set - 10 | to...string - 3
+math obj : const | trig. | min or max | ceil or floor | pow or sqrt | round or abs
+number obj : is...() | parse...()
+audio obj : let audio = new Audio('path') -> audio.play();
+delete anyThing | 230 in book
+$0 ,$1 -> $0.hidden = 0 | attribute.hidden
+/substr .substr \w \S [ac] [a-c] [^ac] ^st \b \. (abc)*+?{k}{k,}{a,b} ab|cd/gmi -> few
+
+//obj
+Person.__proto__ = Animal; -> reference of an obj.
+Person.prototype.speek = function(){//use of this} -> actual obj.
+let Person = {
+    name : 'Prashant',
+    age : 29,
+    isStud : true
+    function info(){
+        console.log('Hi i am '+name);
+    }
+}
+
+//factory func
+function makePerson(name,age,isStud){
+    return {
+        name : name,
+        age : age,
+        isStud : isStud
+        info : function(){
+            console.log('Hi i am '+name);
+        }
+    };
+}
+let Person = new makePerson(name,age,isStud);
+
+//constructor func
+function Person(name,age,isStud){
+    this.name = name;
+    this.age = age;
+    this.isStud = isStud;
+    this.info = () => {
+        console.log('Hi i am '+name);
+    }
+}
+let Person = new Person(name,age,isStud);
+
+class Person extends Animal{
+    constructor(name,age,isStud) {
+        super(name,age);
+        this.isStud = isStud;
+    }
+    set setName(name){
+        this.name = name;
+    }
+    get getName(){
+        return this.name;
+    }
+    info(args){
+        super.info(someArgs);
+        console.log('in addition ,Hi i am '+this.name);
+    }
+    static capitalize(name) {
+        return name.charAt(0).toUpperCase() + name.substr(1, name.length)
+    }
+}
+let Person1 = new Person(name,age,isStud);
+Person.info(args);
+Person.setName = 'Prashant Dobariya';
+document.write(`My name is {Person1.getName} and i'm from {Person1 instanceof Animal} `);
+
+setTimeout | clearTimeout
+function displayTime(...rest){
+    let currTime = new Date();
+    timeCnt.innerHTML = currTime;
+}const timeId = setInterval(displayTime, 1000 ,args);
+clearInterval(timeId);
+
+elmAttributes : onclick = "toggleHide()" | elm.onclick = toggleHide | elm.add/removeEventListener("eventListner",(event)=>{} ,true); -> type | clientX | innerWidth | code | target | value | key | preventDefault() | stopPropogation()
+click | dblclick | contextmenu | checkbox(:checked) 
+mouseover | mouseout | mouseenter | mouseleave | mousedown | mouseup
+transitioned
+mousemove | wheel | scroll
+focus(:focus) | submit(:submit) | blur | change | form.elements[0]
+load | contentLoaded | DOMContentLoaded
+keypress | keydown | keyup
+input | select | textarea
+
+location.href = "url";
+let elmHasNodes = elm.hasChildNodes();
+let elm = document.querySelectorAll("cssSelector"); -> 6
+e.content += "blank"; -> innerHTML/Text/textContent/outerHTML/document.write()
+e.style.property = "blank";
+e.lastElementChild = e.children[e.children.length-1];
+let elem = document.createElement("elemName");
+let text = document.createTextNode("This is ");
+elem.appendChild(text);
+.matches/closest/contains()
+e.tag/nodename
+e.has/get/set/removeAttribute(name, value) -> data-* ,dataset.*
+e.id/className = "name";
+node.append/prepend/before/after/replacewith(e)
+e.insertAdjacentHTML('beforebegin', ei);
+e.remove(); p.removeChild(e) p.replaceChild(li,ul);
+e.classList.add/remove/toggle/contains("class").replace('clr','din');
+document.docElem.parentNode/Element -> doc/null
+list.insertBefore(item,pos);
+let next/prev = next/previousElementSibiling;
+let clone = menu.cloneNode(true);
+let clr = getComputedStyle(btn).color;
+e.style.cssText = "CSS";
+elm.attributeName = "";
+table -> tBodies ,rows ,rowIndex ,cells ,cellIndex ,sectionRowIndex
+
+.length 
+.concat(,,) arr+[,6,7] ,str+"67"
+.indexOf("is",i,len) | lastIndexOf() 
+let sliceStr = str.slice(i,len,d) substring substr
+
+.replace("is","ose")
+.toUpperCase() | toLowerCase()
+.trim() | trimstrart | tirmend()
+.charAt(i) | charCodeAt(i)
+.startswith("substr") | endswith()
+str.includes(substr)
+let reptStr = str.repeat(2)
+
+let books = ["Math","Physics","Bio","Cs"]; -> excess ,update ,add
+.sort(myCmp) | const sorted = arr.toSorted()
+.reverse() .toReversed()
+let lstNum = books.findLast(x => x == "Bio"); | findLastIndex() -> find() or findIndex
+let arrOrNot = Array.isArray(books);
+let wordArr = str.split(' ');
+let str = books.join('_');
+let bookStr = books.toString(books);
+let arr = Array.from("Harry"); -> collections
+let newArr = books.with(1,"Bio");
+let delVal = arr.splice(i,e,x,y,...); console.log(arr.toSpliced(0,1));
+push ,pop ,shift ,unshift -> len ,popped ,arrOfarr ,arrOfobj
+
+let newArr = arr.map((val,idx,arr) => val+1);
+const reduced_func = arr.reduce((e1,e2) => e1+e2);
+let filtered_arr = arr.filter(e => e<10); -> every / some
+let half = x => x/2;
+let greet = () => console.log("Good Morning!");
+let short = (a,b) => a+b;
+books.forEach( book => console.log(book) );
+
+async js    :
+    callback    :  
+                    setTimeout / setInterval     
+                    add/removeEventListener / <elm onclick = 'js'></elm> / elm.onclick = ''; 
+                    () => {} / () => funcName(args)
+    promises    :  
+                    then / catch 
+                    async / await 
+                    fetch / axios
+
+function saveToDb(data,delay,success,failure) {
+    let internetSpeed = Math.floor(Math.random()*10)+1;
+    setTimeout(() => {
+        if(internetSpeed > 4){
+            success && success();
+        }else{
+            failure && failure();
+        }
+    },delay);
+}
+saveToDb(
+    "apnacollege",
+    1000,
+    () => {
+        console.log("Data 1 saved");
+        saveToDb(
+            "shradha",
+            1000,
+            () => {
+                console.log("Data 2 saved");
+                saveToDb(
+                    "HelloWorld",
+                    1000,
+                    () => {
+                        console.log("Data 3 saved");
+                    },
+                    () => {
+                        console.log("Data 3 not saved");
+                    }
+                );
+            },
+            () => {
+                console.log("Data 2 not saved");
+            }
+        );
+    },
+    () => {
+        console.log("Data 1 not saved");
+    }
+);
+
+function saveToDb(data,delay) {
+    return new Promise((res,rej) => {
+        let internetSpeed = Math.floor(Math.random()*10)+1;
+        setTimeout(() => {
+            if(internetSpeed > 4){
+                res("success");
+            }else{
+                rej("failure");
+            }
+        },delay);
+    });
+}
+
+let promise = saveToDb("apnacollege",1000)
+.then(result => saveToDb("shradha",1000))
+.then(result => saveToDb("HelloWorld",1000))
+.then(result => console.log("Entire Data is saved successfully"))
+.catch(error => console.log("Error occurs"));
+console.log(promise); 
+
+(async () => {
+    try{
+        let p1 = await saveToDb("apnacollege",1000);
+        let p2 = await saveToDb("shradha",1000);
+        let p3 = await saveToDb("HelloWorld",1000);
+        return "Success";
+    }catch(error){
+        console.log(error);
+        throw "Failure" or return new Error("Failure"); -> name ,message ,stack
+    }finally{
+        console.log("Still executed...");
+    }
+})();
+
+GET : jsonRes = JSON.parse(jsonResp); -> jsonRes.fact
+POST : jsonReq = JSON.stringify(jsonReq);
+
+fetch(url)
+    .then(res => res.json()) -> text | formData | blob | arrayBuffer
+    .then(data => fetch(url2))
+    .then(res2 => res2.json()) -> console.log(res.status,res.ok,res.headers);
+    .then(data2 => console.log(data2.something))
+    .catch(err => console.log(err));
+
+(async () => {
+    try{
+        let res1 = await fetch(reqUrl1);
+        let data1 = await res1.json();
+        let res2 = await fetch(url2);
+        let data2 = await res2.json();
+        console.log(data2.something);
+        return "Success";
+    }catch(error){
+        throw "Failure";
+    }finally{
+        console.log("Still executed...");
+    }
+})();
+
+(async () => {
+    const options = {
+        method : "POST",
+        headers : { 
+            // "Content-type": "application/json", -> Accept text/plain text/html
+            "Authentication": 'secret'
+        }, 
+        body : JSON.stringify({ 
+            title : "Harry",
+            body : "Bhai",
+            userId : 1100
+        })
+    }; 
+    let res = await fetch(url ,options);
+    let data = await res.json(); 
+})();
+
+axios.get(url).then(res => console.log(res.data.fact));
+
+const url = 'https://cat-fact.herokuapp.com/facts'
+async function getFacts(){
+    let res = await axios.get(url);
+    console.log(res.data.message);
+}
+getFacts();
+
+const url = 'https://icanhazdadjoke.com/';
+(async () => {
+    try{
+        const config = { headers : { Accept : 'application/json' } };
+        let res = await axios.get(url ,config);
+        console.log(res.data.joke);
+    }catch(err){
+        console.log(err);
+    }
+})();
+
+btn.addEventListener('click', async function(){
+    let country = ip.value;
+    let collegesArr = await getColleges(country);
+    list.innerText = '';
+    show(collegesArr);
+});
+async function getColleges(country) {
+    try{
+        let res = await axios.get(url+country);
+        return res.data;
+    }catch(err){
+        console.log("error : " + err);
+        return [];
+    }
+}
+function show(collegesArr){
+    for(college of collegesArr){
+        let li = document.createElement('li');
+        li.innerText = college.name;
+        list.append(li);
+    }
+}
+
+promise | event handler
+let all_promises = Promise.all([p1,p2,p3]); // all res form single promise
+all_promises.then(val => console.log(val));
+let res_promises = Promise.allSettled([p1,p2,p3]); // res promise form single promise
+let fst_promise = Promise.race([p1,p2,p3]); // fst promise form single promise
+let fstRes_promise = Promise.any([p1,p2,p3]); // fst res promise form single promise
+let res = Promise.resolve(val);
+let rej = Promise.reject(error);
+
+client req -> server -> res + cookie(set-cookie HTTP-headers and set key)
+let cookie = document.cookie(obj)
+cookie = 'name=harry900; path=/a expires=timestamp'; (doc add it)
+cookie = `${decodeURIComponent(encodeURIComponent(key))}=${decodeURIComponent(encodeURIComponent(value))}`;
+
+localStorage.setItem('name', 'harry');
+localStorage.getItem('name');
+localStorage.removeItem('name');
+localStorage.clear()
+localStorage.key(1)
+localStorage.length
+
+localStorage.key = val; // both are str ,use json method for obj
+localStorage['key'] = val;
+delete localStorage.key;
+
+//strorage event
+onstorage = (e) => {
+    alert('Changed')
+}
+
+add info in URL -> url?q=harry+potter | ?name=shradha&marks=95 | url/route | url /:id :num :q {{id}} <id> | url/search?name=raya
+req/resp headers -> networks -> search -> req -> click -> req ,change headers value Accept application/json meta data
+networks -> sources -> breakpoints ,resp ,preview
+
+
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
+
+app.use(express.urlencoded({ extended : true }));
+app.use(express.json());
+
+app.set('view engine', 'ejs'); -> set view/template -> views
+app.set("views", path.join(__dirname, '/views'));
+
+app.listen(port ,() => {
+    console.log(`app listening on port ${port}`);
+});
+
+app.use((req ,res) => {
+    // console.log('Request received' ,req ,let {q} = req.query); 
+    // text/plain ,json ,html ... etc {q:'apple' ,color: 'green'}
+    res.send({
+        "name" : "Harry",
+        "age" : 22,
+        "isCoder" : true 
+    });
+});
+
+data : HTML ,text ,json ,res.sendFile(path.join(__dirname,'./index.html'))
+
+// form : method = 'post' action = '/register'
+app.post('/register', (req ,res) => {
+    let { user , password } = req.body;
+    res.send('Standerd POST response');
+});
+
+app.get('/ig/:username', (req, res) => {
+    const { username } = req.params
+    const data = Math.floor(Math.random() * 100) + 1;
+    const instaData = require('data.json')[username];
+    instaData && res.render('home' ,{ instaData ,data }); -> data 
+});
+
+function routing(rout){
+    app.get(rout ,(req, res) => {
+        let {username ,id} = req.params; 
+        q && let { q } = req.query;
+        res.send(`Your contacted path: ${rout}`);
+    });
+}
+routing('/');
+routing('/search');
+routing('/:username/:id');
+routing('*');
+    
+
+create remote repo -> readme.md add change -> commit changes
+remote to local repo -> git clone <code link> -> add change (changes status)
+git status -> change exist file (modified -> staged -> unmodified)
+add file to local and link it -> untrack -> unmodified -> edit -> modified
+change -> modified -> add (staged) git add <file or .> + commit (final) git commit -m <message>
+working dir -> staying area - add (staged) -> final change - commit -> upload on remote repo - git push origin main
+local repo -> git init -> git add . -> git commit -m <message> -> git remote add origin <created repo link> (git remote -v or git branch) -> git branch -M main -> git push origin main
+git push -u origin main -> git push 
+git commit -am "added dot"
+master (main) + add feature (copy of branch) + bugfix copy -> merge it after completion
+git branch (check branch)
+git branch -M main (rename branch)
+git checkout <branch> (nevigate)
+git checkout -b <new branch> (create new branch)
+git branch -d <branch> (delete branch)
+git push --set-upstream origin <branch> 
+link feature with main : git diff <another branch> (diff) -> git merge <another branch> | PR (pull) create merge(commit) confirm
+push = local to remote
+pull = remote to local - git pull origin main
+2 branch - //add new feature - button or form - (-+) or (+-) - merge - resolve : modified and push
+add unneccessary change - modified -> add (staged) -> git reset <file> or empty
+                                   -> staged + commit -> git reset HEAD~1
+git log
+hsh : git reset <commit hsh> git reset --hard <commit hsh>
+forking -> PR merge
+
+<%- include('includes/head') %>
+<% %> -> conditional and loops
+<% js %>
+    <%= eval | js %>
+    print html
+<% js %>
+
+ 
+git branch | git branch -M main
+
+TERMINAL : 
+    NORMAL : 
+        clear exit tab ctrl+c errow-key tab
+    BASIC : 
+        man <command> | ipconfig | pwd | ls -la | cd <path : name ./ ../ /Users/-- ~> 
+    DIR : 
+        mkdir <dir name> | rmdir <dir name>
+    FILE : 
+        cat <file>
+        touch <file1> <file2> ... or cat > <file> 
+        rm -rf <file> 
+        cp <exist file> <new file> | cat <old file> > <new file>
+        mv <file> <path>
+        cat <file1 file2...> > <new file>
+    RUN :   
+        -v(--version) or -g(--global) | <package>(git) | <package> <file>(node ./index.js)
+    TERMINAL ARGS :
+        process & process.argv | release ,cwd() | global
+    NPM :
+        npm 
+        npm i
+
+        npm init -y -> 'type' : 'module' or mjs files
+        npm i express
+        npm i ejs
+
+        npm i create-react-app <my-app or .>
+
+        npm create vite@latest
+        npm i
+        npm run dev
+        npm i uuid
+    YARN :
+        yarn add...
+    NPX :
+        npx create-react-app my-app
+        npx create-next-app .
+
+        npx create vite@latest
+        npx run dev
+    NODEMON : 
+        npm i -g nodemon
+        npm link nodemon
+    GITHUB : remote repo
+        local repo upload : create repo -> upload file -> commit changes
+        change remote repo (add) -> commit changes
+    GIT : local repo | git | git log
+        CONFIG :
+            git config --global user.name "Prashant Dobariya"
+            git config --global user.email "prashandobariya276@gmail.com"
+            git config --list
+        REMOTE -> LOCAL :
+            git clone <code link>
+            git status
+            CREATED NEW FILE (UNTRACK) : TRACK(STAGED -> COMMIT)
+                git add <file> or .
+            CHANGE EXISTED FILE (MODIFIED -> STAGED -> COMMIT) :
+                git commit -m <message>
+            BOTH : (UNMODIFIED : MODIFIED ,UNTRACK -> STAGED + COMMIT) 
+
+                git commit -am "added dot"
+            UPLOAD :
+                git push origin <branch> 
+                git push origin main -> git push -u origin main -> git push
+        LOCAL -> REMOTE :
+            git init
+            git remote add origin <code link>
+            git remote -v
+
+
+attribute : {} -> js
+props : {} -> prop obj.
+jsx : {} -> js+html
+
+JSX variables : dynamic value in front-end ,api ,json data ,props ,multiple elms ,form elm
+let [state,setState] = useState({
+    constKey : 0,
+    varKey : init,
+    info : ['Home','About','Contact']
+});
+setState( prevObj => ({
+    ...prevObj,
+    // prevObj.info.toString()
+    // { key : 'added obj'}
+    // constKey : prevObj.constKey+1
+}));
+let sideEffect = useEffect(() => { getImgs() },[]);
+
+<elm 
+    onclick={handleOnClick} -> value={state} ,onchange->setState(e.target.value)
+    style={{backgroundColor: title=='car'&&'royalblue',}}
+    prop1={'v1'}
+    prop2={'v2'}
+/>
+elm({ prop1,prop2 })
+
+<Navbar 
+    navoptions = {['Home','About','Contact']}
+/> // similarly we can pass object
+<nav>
+    <ul>{
+        navoptions.map( navoption => 
+            <li><a href='#'>{navoption}</a></li> 
+    )}</ul>
+</nav>
+
+<div className='ProductTab'>{
+    productData.map( {title,data,link} ,i => 
+        <Product 
+            key={i} -> sent for deletion or data.id
+            title={title} 
+            data={data} 
+            link={link}
+        /> 
+)}</div>
+
+const delHandler = i => setMainTask([...mainTask].splice(i,1)) otherwise use map
+
+let handleInputChange = (event) => {
+    setFormData( prevFormData => ({
+            ...prevFormData,
+            [event.target.name]: event.target.value
+        })
+    );
+};
+ 
+
+

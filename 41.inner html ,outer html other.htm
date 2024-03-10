@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Hello World</div>
+    <h1>Hellow World</h1>
+    <div>greet</div>
+    <script>
+        let div = document.querySelectorAll('div')[0];
+        let h1 = document.querySelector('h1');
+        let div1 = document.querySelectorAll('div')[1]
+        console.log(div.nodeName ,div.tagName);
+        div.innerHTML += "<h2>How are you?</h2>";
+        h1.outerHTML = "<p>Hello</p>"
+        div1.textContent += " <p>good morning</p>";
+        document .write("hi");
+    </script>
+</body> 
+</html>

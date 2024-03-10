@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get Random Facts</h1>
+    <input type="text" name="mySearch" id="search" placeholder="Enter  country">
+    <ul id="list">
+        
+    </ul>
+    <button>Get random facts</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+    <script>
+        // const url = 'https://catfact.ninja/fact';
+        // async function getFacts(){
+            //     try{
+                //         let res = await axios.get(url);
+                //         return res.data.fact;
+                //     }catch(e){
+        //         return "No fact found";
+        //     }
+        // }
+
+        // const p = document.querySelector('p');
+        
+        // let btn = document.querySelector('button');
+        // btn.addEventListener('click', async function(){
+        //     console.log("clicked");
+        //     const fact = await getFacts();
+        //     console.log(fact);
+        //     p.innerText = `${fact}`;
+        // });
+
+        // const url = 'https://icanhazdadjoke.com/';
+        // (async () => {
+        //     try{
+        //         const config = { headers : { Accept : 'application/json' } };
+        //         let res = await axios.get(url ,config);
+        //         console.log(res.data.joke);
+        //     }catch(err){
+        //         console.log(err);
+        //     }
+        // })();
+
+        const url = 'http://universities.hipolabs.com/search?name=';
+        const btn = document.querySelector('button');
+        const ip = document.querySelector('input');
+        const list = document.querySelector('ul');
+
+        btn.addEventListener('click', async function(){
+            let country = ip.value;
+            let collegesArr = await getColleges(country);
+            list.innerText = '';
+            show(collegesArr);
+        });
+
+        async function getColleges(country) {
+            try{
+                let res = await axios.get(url+country);
+                return res.data;
+            }catch(err){
+                console.log("error : " + err);
+                return [];
+            }
+        }
+
+        function show(collegesArr){
+            for(college of collegesArr){
+                let li = document.createElement('li');
+                li.innerText = college.name;
+                list.append(li);
+            }
+        }
+
+        </script>
+</body>
+</html>

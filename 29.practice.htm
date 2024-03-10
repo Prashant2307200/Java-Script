@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>  
+
+        // Q.1
+
+            const canDrive = age => age >= 18;
+            let age = +prompt("Enter age ");
+            
+            if(canDrive(age)){
+                alert("Yes you can drive");
+            }else{
+                alert("No you can drive");
+            }
+
+        // Q.2
+
+            let runAgain = true;
+            while(runAgain){
+                let age = +prompt("Enter age ");
+                if(canDrive(age)){
+                    alert("Yes you can drive");
+                }else{
+                    alert("No you can drive");
+                }
+                runAgain = confirm("Are you sure you want to play again?");
+            }
+        
+        // Q.3
+
+            let runAgain1 = true;
+            while(runAgain){
+                let age = +prompt("Enter age ");
+                if(age <= 0){
+                    console.error("Please enter valid age");
+                    alert("invalid age");
+                    break;
+                }
+                if(canDrive(age)){
+                    alert("Yes you can drive");
+                }else{
+                    alert("No you can drive");
+                }
+                runAgain = confirm("Are you sure you want to play again?");
+            }
+
+        // Q.4
+            let n = +prompt("Enter number : ");
+            if(n < 4){
+                location.href = "https://www.google.com";
+            }
+        
+        // Q.5
+            let color = prompt("Enter color : ");
+            document.body.style.backgroundColor = color;
+    </script>
+</body>
+</html>

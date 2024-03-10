@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function saveToDb(data,delay,success,failure) {
+            let internetSpeed = Math.floor(Math.random()*10)+1;
+            setTimeout(() => {
+                if(internetSpeed > 4){
+                    success && success();
+                }else{
+                    failure && failure();
+                }
+            },delay);
+        }
+        saveToDb(
+            "apnacollege",
+            1000,
+            () => {
+                console.log("Data 1 saved");
+                saveToDb(
+                    "shradha",
+                    1000,
+                    () => {
+                        console.log("Data 2 saved");
+                        saveToDb(
+                            "HelloWorld",
+                            1000,
+                            () => {
+                                console.log("Data 3 saved");
+                            },
+                            () => {
+                                console.log("Data 3 not saved");
+                            }
+                        );
+                    },
+                    () => {
+                        console.log("Data 2 not saved");
+                    }
+                );
+            },
+            () => {
+                console.log("Data 1 not saved");
+            }
+        );
+
+        function saveToDb(data,delay) {
+            return new Promise((res,rej) => {
+                let internetSpeed = Math.floor(Math.random()*10)+1;
+                setTimeout(() => {
+                    if(internetSpeed > 4){
+                        res("success");
+                    }else{
+                        rej("failure");
+                    }
+                },1000);
+            });
+        }
+        let promise = saveToDb("apnacollege",1000)
+        .then(() => {
+            console.log("Data 1 saved");
+            return saveToDb("shradha",1000);
+        })
+        .then(() => {
+            console.log("Data 2 saved");
+            return saveToDb("HelloWorld",1000);
+        })
+        .then(() => {
+            console.log("Data 3 saved");
+        })
+        .catch(() => {
+            console.log("Error occurs");
+        });
+        console.log(promise);
+
+        async function saveToDb(data,delay) {
+            let internetSpeed = Math.floor(Math.random()*10)+1;
+            return new Promise((res,rej) => {
+                setTimeout(() => {
+                    if(internetSpeed > 4){
+                        res("success");
+                        // return "Success";
+                    }else{
+                        rej("failure");
+                        // throw "Failure";
+                        // return new Error("Failure");
+                    }
+                },delay);
+            });
+        }
+        (async () => {
+            try{
+                let p1 = await saveToDb("apnacollege",1000);
+                console.log(p1);
+                let p2 = await saveToDb("shradha",1000);
+                console.log(p2);
+                let p3 = await saveToDb("HelloWorld",1000);
+                console.log(p3);
+            }catch(error){
+                console.log(error);
+                return -1;
+            }finally{
+                console.log("Still executed...");
+            }
+        })();
+
+    </script>
+</body>
+</html>

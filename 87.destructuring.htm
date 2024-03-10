@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [35,459,359,594,39];
+        let [a,,c,...rest] = arr;
+        document.write(`${a} ${c} ${rest} ${Array.isArray(rest)}`);
+
+        const {x,y,z} = {x : 1,y : 2,z : 3};
+        const arrObj = {...arr ,1 : 45};
+        console.log(x,z);
+        console.log(arrObj);
+
+        const {...r} = {p : 1,q : 2,r : 3};
+        console.log(r ,Array.isArray(r));
+
+        const summation = (...rest) => {
+            let sum = 0
+            for(let elm of rest){
+                sum += elm;
+            }return sum;
+        };
+        console.log(summation(1,2));
+        console.log(summation(1,2,3));
+    </script>
+</body>
+</html>

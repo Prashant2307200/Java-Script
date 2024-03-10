@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+    <script>
+        
+        let ul = document.querySelector("ul");
+
+        ul.insertAdjacentHTML("beforebegin","<p>beforebegin</p>");
+        ul.insertAdjacentHTML("afterbegin","<p>afterbegin</p>");
+        ul.insertAdjacentHTML("beforeend","<p>beforeend</p>");
+        ul.insertAdjacentHTML("afterend","<p>afterend</p>");
+
+        let home = ul.firstElementChild.nextElementSibling;
+        let about = home.nextElementSibling;
+        let service = about.nextElementSibling;
+        let contact = service.nextElementSibling;
+
+        let h = document.createElement('p');
+        h.innerHTML = "Home coming";
+        console.log(h);
+
+        home.remove();
+        ul.removeChild(about);
+        ul.replaceChild(contact,service);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+    <script>
+
+        let diva = document.createElement('div');
+        let texta = document.createTextNode('append');
+        diva.appendChild(texta);
+        console.log(diva);
+
+        let divp = document.createElement('div');
+        let textp = document.createTextNode('prepend');
+        divp.appendChild(textp);
+        console.log(divp);
+
+        let divb = document.createElement('div');
+        let textb = document.createTextNode('before');
+        divb.appendChild(textb);
+        console.log(divb);
+
+        let divaf = document.createElement('div');
+        let textaf = document.createTextNode('after');
+        divaf.appendChild(textaf);
+        console.log(divaf);
+
+        let ul = document.querySelector('ul');
+        ul.append(diva);
+        ul.prepend(divp);
+        ul.before(divb);
+        ul.after(divaf);
+        
+    </script>
+</body>
+</html>

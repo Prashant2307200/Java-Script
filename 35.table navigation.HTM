@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption>RESULT</caption>
+        <thead>
+            <tr>
+                <th>Student</th>>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ram</td>
+                <td>49</td>
+            </tr>
+            <tr>
+                <td>Mahesh</td>
+                <td>32</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>
+                    pass
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+        let table = document.body.firstElementChild;
+        console.log(table);
+        console.log(table.rows);
+        console.log(table.tBodies);
+    </script>
+</body>
+</html>
+
+<!-- 
+    table.rows
+    table.caption
+    table.tHead
+    table.tFoot
+    table.tBodies
+    tbody.rows
+    tr.cells
+    tr.sectionRowIndex
+    tr.rowIndex
+    tr.cellIndex
+-->

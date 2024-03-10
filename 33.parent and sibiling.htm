@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        note on dom collection :
+            read only
+            they are live elm.childNodes will automatically updated if childNode of elm will change
+            they are iterable using for of loop
+    -->
+    <script>
+        console.log(document.body.parentElement);
+        console.log(document.body.parentNode);
+        console.log(document.body.firstChild.nextSibling);
+        console.log(document.body.firstChild.nextSibling.previousElementSibling);
+    </script>
+</body>
+</html>

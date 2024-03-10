@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const date = new Date();
+        console.log(new Date(0));
+        console.log(new Date(100));
+        // year,month,date,hours,minutes,seconds,milliseconds
+        console.log(new Date(3020,4,5,6,7,4,34));
+        console.log(new Date("2019-09-30")); 
+        console.log(date.toISOString());
+        console.log(date.toDateString());
+        console.log(date.toTimeString());
+        date.setFullYear(2000);
+        console.log(date.getFullYear());
+        console.log(date.getMonth());
+        console.log(date.getDate());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        console.log(Date.now());
+
+        const num = 42.23;
+        console.log(Number.isInteger(num));
+        console.log(Number.parseInt(num) ,Number.parseFloat(num));
+        console.log(Math.round(num));
+        console.log(Math.floor(num));
+        console.log(Math.sqrt(num));
+        console.log(Math.abs(-42));
+        console.log(Math.random());
+        console.log(Math.sin(Math.PI/2));
+        console.log(Math.cos(Math.PI));
+    </script>
+</body>
+</html>
